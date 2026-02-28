@@ -1,5 +1,8 @@
 # ParsecWarpforfree
 
+This is old! just use the new crack present in the main branch
+
+
 **ParsecWarpforfree** is a simple tool that leverages a [mitmproxy](https://mitmproxy.org/) instance to intercept and modify the API responses of Parsec. Specifically, it tricks the Parsec client into thinking the **Warp feature** is enabled, even without a paid subscription.
 
 ---
