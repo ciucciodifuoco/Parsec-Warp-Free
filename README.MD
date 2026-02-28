@@ -1,35 +1,10 @@
 # ParsecWarpforfree
 
-**ParsecWarpforfree** is a simple tool that leverages a [mitmproxy](https://mitmproxy.org/) instance to intercept and modify the API responses of Parsec. Specifically, it tricks the Parsec client into thinking the **Warp feature** is enabled, even without a paid subscription.
+Improved version to get WARP features for free in Parsec:
 
----
+Instructions:
 
-## 🚀 How It Works
-
-1. A custom mitmproxy instance is started.
-2. This instance intercepts the Parsec API response related to the Warp feature.
-3. It modifies the response, changing `"warp": false` to `"warp": true`.
-4. As long as mitmproxy is running, Parsec displays the Warp feature as enabled in the UI.
-
----
-
-## ⚙️ Prerequisites
-
-### Install mitmproxy
-
-You need to have mitmproxy installed for this to work.
-
-#### Installation:
-
-- **Windows:**
-  ```bash
-  pip install mitmproxy
-
-> ⚠️ **Warning:** Be sure to have the mitmproxy CA installed to be able to decrypt HTTPS traffic
-https://docs.mitmproxy.org/stable/concepts/certificates/
-## ⚙️ Run
-
-use launch_parsec.bat - assuming mitmdump command is available and Parsec is installed in C:\Program Files\Parsec
-
-## Potential Todo:
-Patch the parsec DLL to dinamycally set the key to True when its received
+1) Disable the Parsec Service under Windows Services
+2) replace parsecd-150-101b.dll in C:\Users\{{username}}\AppData\Roaming\Parsec
+3) replace parsecd in C:\Program Files\Parsec
+4) Starts back the Parsec service
